@@ -383,7 +383,10 @@
     <axis xyz="0 0 1"/>
     <limit effort="2" lower="${-pi/2}" upper="${pi/2}" velocity="${pi}"/>
     <xacro:if value="${arm_type == 'mobile_wx250s'}">
+    <!-- TODO-JYW:
       <origin rpy="0 0 0" xyz="0.047228 0 0.44425"/>
+      --> 
+      <origin rpy="0 0 0" xyz="0.047228 0 0.05200"/>  
     </xacro:if>
     <xacro:unless value="${arm_type == 'mobile_wx250s'}">
       <origin rpy="0 0 0" xyz="0.047228 0 0.38425"/>
