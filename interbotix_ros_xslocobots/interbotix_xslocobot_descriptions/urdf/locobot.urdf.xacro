@@ -382,12 +382,14 @@
   <joint name="pan" type="revolute">
     <axis xyz="0 0 1"/>
     <limit effort="2" lower="${-pi/2}" upper="${pi/2}" velocity="${pi}"/>
+
     <xacro:if value="${arm_type == 'mobile_wx250s'}">
-    <!-- TODO-JYW:
+      <!-- TODO-JYW: 52mm (pan_link ++> camara_tower_link) + 88mm (camera_tower_link ++> base_link)
       <origin rpy="0 0 0" xyz="0.047228 0 0.44425"/>
       --> 
       <origin rpy="0 0 0" xyz="0.047228 0 0.05200"/>  
     </xacro:if>
+
     <xacro:unless value="${arm_type == 'mobile_wx250s'}">
       <origin rpy="0 0 0" xyz="0.047228 0 0.38425"/>
     </xacro:unless>
