@@ -46,7 +46,9 @@
     <collision>
       <origin rpy="0 0 0" xyz="0.0 0 0.05949"/>
       <geometry>
-        <cylinder length="0.10938" radius="0.178"/>
+	      <!-- TODO-JYW: Reducing the radius by half to determine if this affects the proximity to obstacles. -->      
+	      <!-- <cylinder length="0.10938" radius="0.178"/> -->
+        <cylinder length="0.10938" radius="0.089"/>
       </geometry>
     </collision>
     <inertial>
